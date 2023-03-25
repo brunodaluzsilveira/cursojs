@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13pt;
+            background-color: rgba(0, 255, 255, 0.74);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        fieldset {
+            text-align: center;
+            margin: auto;
+            max-width: 500px;
+            background-color: rgb(2, 180, 171);
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.445) 0px 5px 5px;
+        }
+
+        legend {
+            background-color: rgb(2, 180, 171);
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        input {
+            width: 80px;
+            text-align: center;
+            background-color: rgb(94, 221, 179);
+            border-color: aquamarine;
+            border-radius: 5px;
+        }
+
+        input.botao {
+            width: 196px;
+            background-color: rgb(41, 139, 139);
+            border-color: rgb(17, 128, 128);
+        }
+
+        div.res {
+            font-style: italic;
+            color: rgba(0, 0, 0, 0.356);
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            width: 400px;
+            border: 1px solid rgb(1, 99, 94);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.671) 1px 1px 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Treinando JavaScript</h1>
+    <fieldset>
+        <legend>Calculadora</legend>
+        <h2>Somando valores</h2>
+        <input type="number" name="somtxtn1" id="idsomtxtn1"><strong> + </strong>
+        <input type="number" name="somtxtn2" id="idsomtxtn2"><br>
+        <input class="botao" type="button" value="Calcular" onclick="somar()">
+        <div id="somres" class="res">Resultado da Soma</div>
+        <h2>Subtraindo valores</h2>
+        <input type="number" name="subtxtn1" id="idsubtxtn1"><strong> - </strong>
+        <input type="number" name="subtxtn2" id="idsubtxtn2"><br>
+        <input class="botao" type="button" value="Calcular" onclick="subtrair()">
+        <div id="subres" class="res">Resultado da Subtração</div>
+        <h2>Dividindo valores</h2>
+        <input type="number" name="divtxtn1" id="iddivtxtn1"><strong> ÷ </strong>
+        <input type="number" name="divtxtn2" id="iddivtxtn2"><br>
+        <input class="botao" type="button" value="Calcular" onclick="dividir()">
+        <div id="divres" class="res">Resultado da Divisão</div>
+    </fieldset>
+    
+    <script>
+        function somar() {
+            var tn1 = document.getElementById('idsomtxtn1')
+            var tn2 = document.getElementById('idsomtxtn2')
+            var res = document.getElementById('somres')
+            var n1 = Number(tn1.value) 
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+            res.style.color = 'black'
+            res.style.fontStyle = 'normal'
+        }
+
+        function subtrair () {
+            var tn1 = document.getElementById('idsubtxtn1')
+            var tn2 = document.getElementById('idsubtxtn2')
+            var res = document.getElementById('subres')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 - n2
+            res.innerHTML = `A subtração entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+            res.style.color = 'black'
+            res.style.fontStyle = 'normal'
+        }
+
+        function dividir() {
+            var tn1 = document.getElementById('iddivtxtn1')
+            var tn2 = document.getElementById('iddivtxtn2')
+            var res = document.getElementById('divres')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var d = n1 / n2
+            res.innerHTML = `A divisão entre ${n1} e ${n2} é igual a <strong>${d}</strong>`
+            res.style.color = 'black'
+            res.style.fontStyle = 'normal'
+        }
+    </script>
+</body>
+</html>
