@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Você é Brasileiro ou Estrangeiro?</h1>
+    País: <input type="text" name="npais" id="ipais">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function enviar(){
+            var país = document.querySelector('input#ipais')
+            var res = document.querySelector('div#res')
+            var nac = país.value
+            res.innerHTML = `<p>Vivendo em ${nac}</p>`
+            if (nac == 'Brasil' || nac == 'Brasíl' || nac == 'Brazil') {
+                res.innerHTML += '<p>Você é Brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é Estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
