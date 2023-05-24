@@ -3,5 +3,14 @@
 @media screen and (min-width: 700px) {
     section {
         width: 500px;
+        align-items: center;
+        text-align: center;
+    }
+
+    #inum {
+        width: 200px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }

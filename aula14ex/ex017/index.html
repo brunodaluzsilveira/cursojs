@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" media="all">
     <link rel="stylesheet" href="media-query.css" media="screen">
-    <title>Modelo de Exercício</title>
+    <title>Gerador de Tabuada</title>
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Gerador de Tabuada</h1>
     </header>
     <main>
         <section>
-            <div>
-                Testando...
+            <div id="pergunta">
+                <label for="inum">Número:</label> <input type="number" name="num" id="inum">
+                <input type="button" value="Gerar Tabuada" id="botao">
             </div>
-            <div>
-
+            <div id="resultado">
+                <select name="tabuada" id="tabuadaid" size="10">
+                    <option>Digite um número acima</option>
+                </select>
             </div>
         </section>
     </main>
