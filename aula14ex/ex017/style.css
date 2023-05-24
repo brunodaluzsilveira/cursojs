@@ -33,9 +33,9 @@ section {
 }
 
 select {
-    -webkit-appearance: value;
-    -moz-appearance: value;
-    appearance: value;
+    -webkit-appearance: textarea;
+    -moz-appearance: textarea;
+    appearance: textarea;
 }
 
 footer, a {
