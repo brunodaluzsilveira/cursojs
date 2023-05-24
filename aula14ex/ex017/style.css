@@ -32,6 +32,12 @@ section {
     text-align: center;
 }
 
+select {
+    -webkit-appearance: value;
+    -moz-appearance: value;
+    appearance: value;
+}
+
 footer, a {
     color: white;
     text-align: center;
